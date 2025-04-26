@@ -48,6 +48,183 @@ h1, h2, h3, h4, h5, h6 {
 
 /** Your CSS Below **/
 
+html, body {      
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-stone100);
+  font-family: var(--fs-base);
+  font-size: var(--font-paragraph);
+  color: var(--clr-stone600);
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+main {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  /*box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);*/
+  max-width: 700px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: var(--clr-stone900);
+  font-family: var(--fs-accent);
+  font-size: var(--font-header);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.5px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  
+}
+
+p {
+margin-bottom: 32px;
+}
+
+.preparation-time {
+  background-color: var(--clr-rose50);
+  color: var(--clr-stone600);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.preparation-time h3 {
+  color: var(--clr-rose800);
+  font-weight: var(--fw-bold); 
+  margin-bottom: 15px; 
+  font-size: 1.2rem; 
+}          
+
+.preparation-time ul {  
+  list-style: disc;     
+  padding-left: 24px;  
+}
+
+.preparation-time li {
+ font-size: 1rem;  
+}
+
+.preparation-time li span:first-child {
+  font-weight: var(--fw-bold);
+}
+
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
+  color: var(--clr-brown800);
+  font-family: var(--fs-accent);
+  font-size: var(--font-sub-header);
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.ingredients ul {
+  list-style-type: disc;
+  padding-left: 25px;
+  margin-bottom: 1.5em;
+}
+
+.ingredients li {
+  color: var(--clr-stone600);
+}
+
+.ingredients li,
+.preparation-time li {
+  padding-left: 1em;   
+  margin-bottom: 12px;     
+  line-height: 1.6;
+}
+
+.instructions ol {
+  list-style-type: none;
+  counter-reset: step;
+  padding-left: 0px;
+  margin-bottom: 1.5em;
+}
+
+.instructions li::before {
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: sans-serif;
+  font-weight: var(--fw-bold);
+  color: var(--clr-brown800);
+  width: 1em;
+  display: inline-block;
+ 
+}
+
+.instructions li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.instructions li span:first-child {
+  font-weight: var(--fw-bold);
+}
+
+
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nutrition th,
+.nutrition td {
+  padding: 12px 32px;
+  text-align: left;
+}
+
+.nutrition th {
+  color: var(--clr-brown800);
+}
+
+.nutrition tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--clr-stone150);
+}
+
+.nutrition td:last-child { /*moves the last children (227kcal, 0g, 20g, 22g)*/
+  padding-right: 45px;  /*padding positions them horizontally as requested*/
+  font-weight: var(--fw-bold); /*makes text bold*/
+  color: var(--clr-brown800); /*adds variable color*/
+}
+
+
+hr {  
+  border: none; 
+  height: 1px;  
+  background-color: var(--clr-stone150);  
+  margin: 30px 0; 
+}
+
+
+footer { 
+  margin-top: 10px;
+}
+
 /** Attribution CSS **/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
